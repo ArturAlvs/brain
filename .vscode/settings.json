@@ -1,0 +1,13 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "initializer_list": "cpp",
+        "*.tcc": "cpp"
+    }
+}
