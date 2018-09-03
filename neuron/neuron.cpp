@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Neuron::Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento padrao_esperado_arg, int inibidores_cima_arg, vector<Synapse> axonio_arg)
+Neuron::Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento padrao_esperado_arg, int inibidores_cima_arg, Synapse axonio_arg)
 {
   
     hashidsxx::Hashids hash("");
@@ -33,19 +33,7 @@ Neuron::Neuron(){
 
 void Neuron::AdicionarSynapseAoAxonio(Synapse s){
 
-    axonio.push_back(s);
-
-}
-void Neuron::RemoverSynapseDoAxonio(Synapse s){
-
-
-    for (auto it = axonio.begin(); it != axonio.end(); ) {
-        if ( s.SameSynap( it->SynapID() ) ) {
-            it = axonio.erase(it);
-        } else {
-            ++it;
-        }
-    }
+    axonio = s;
 
 }
 

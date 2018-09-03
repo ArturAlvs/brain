@@ -20,19 +20,20 @@ class Neuron
   
   TiposDeNeuronios tipo;
 
+  // mudar quando for um neuronio NAO sensorial
+  //    para synapse ou neuron?
   Evento padrao_esperado;
 
   int inibidores_cima;
 
-  vector<Synapse> axonio;
+  Synapse axonio;
 
 public:
-  Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento padrao_esperado_arg, int inibidores_cima_arg, vector<Synapse> axonio_arg);
+  Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento padrao_esperado_arg, int inibidores_cima_arg, Synapse axonio_arg);
   Neuron();
   bool VerificarAtivacao(Evento eventoMundi);
 
   void AdicionarSynapseAoAxonio(Synapse s);
-  void RemoverSynapseDoAxonio(Synapse s);
 
   bool Ativacao();
 

@@ -11,6 +11,11 @@ enum TiposDeSynapses { ELETRICAL, CHEMICAL };
 
 class Synapse
 {
+
+  //ADD
+  //  LISTAS && ENUMS
+  // 
+  
   Neuron preSynap;
 
   Neuron posSynap;
