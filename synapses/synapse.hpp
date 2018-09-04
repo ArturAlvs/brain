@@ -16,21 +16,26 @@ class Synapse
   //  LISTAS && ENUMS
   // 
   
-  Neuron preSynap;
-
-  Neuron posSynap;
+  // como descrito na neuron_fig1.png
+  // 
+  // mais de um no preSynap = sinap eletrica e sinap quimica
+  //  mais que isso, estaria aumentando o potencial do brain?
+  //
+  // mais de um no poSynap = terminais de um axonio
+  vector<Neuron> preSynap;
+  vector<Neuron> posSynap;
 
   TiposDeSynapses tipoSynapse;
 
   string id;
 
 public:
-  Synapse(Neuron preSynap_arg, Neuron posSynap_arg, TiposDeSynapses tipo_arg, int id_arg);
+  Synapse(vector<Neuron> preSynap_arg, vector<Neuron> posSynap_arg, TiposDeSynapses tipo_arg, int id_arg);
   Synapse();
   TiposDeSynapses RetornarTipo();
 
-  void DefinirPreSynap(Neuron n);
-  void DefinirPosSynap(Neuron n);
+  void DefinirPreSynap(vector<Neuron> n);
+  void DefinirPosSynap(vector<Neuron> n);
 
   bool SameSynap(string id_comparacao);
 

@@ -4,7 +4,7 @@
 #include "synapse.hpp"
 #include "../outsidelib/hashidsxx/hashids.h"
 
-Synapse::Synapse(Neuron preSynap_arg, Neuron posSynap_arg, TiposDeSynapses tipo_arg, int id_arg)
+Synapse::Synapse(vector<Neuron> preSynap_arg, vector<Neuron> posSynap_arg, TiposDeSynapses tipo_arg, int id_arg)
 {
   preSynap = preSynap_arg;
   posSynap = posSynap_arg;
@@ -24,14 +24,14 @@ TiposDeSynapses Synapse::RetornarTipo()
   return tipoSynapse;
 }
 
-void Synapse::DefinirPreSynap(Neuron n)
+void Synapse::DefinirPreSynap(vector<Neuron> ns)
 {
-  preSynap = n;
+  preSynap = ns;
 }
 
-void Synapse::DefinirPosSynap(Neuron n)
+void Synapse::DefinirPosSynap(vector<Neuron> ns)
 {
-  posSynap = n;
+  posSynap = ns;
 }
 
 

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Neuron::Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento padrao_esperado_arg, int inibidores_cima_arg, Synapse axonio_arg)
+Neuron::Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento inputs_arg, int inibidores_cima_arg, Synapse axonio_arg)
 {
   
     hashidsxx::Hashids hash("");
@@ -19,7 +19,7 @@ Neuron::Neuron(int id_arg, string nome_arg, TiposDeNeuronios tipo_arg, Evento pa
   
     tipo = tipo_arg;
 
-    padrao_esperado = padrao_esperado_arg;
+    inputs = inputs_arg;
 
     inibidores_cima = inibidores_cima_arg;
 
@@ -45,17 +45,16 @@ bool Neuron::VerificarAtivacao(Evento eventoMundi){
     
     for(int i = 0; i < eventoMundi.RetornarDimensoes(); i++)
     {
-        
-        if (padrao_esperado.RetornarDado(i) == eventoMundi.RetornarDado(i)) {
+                
+        if (inputs.RetornarDado(i) != eventoMundi.RetornarDado(i)) {
             
-            
-            
-            return true;
+            // tem um elemento diferente no vetor
+            return false;
         }
         
     }
     
 
-    return false;   
+    return true;   
 
 }

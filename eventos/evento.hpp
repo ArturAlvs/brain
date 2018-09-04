@@ -9,10 +9,10 @@ class Evento
 {
   unsigned char *dados;
 
-  int dimensoes;
+  int dimensoes_dos_dados;
 
 public:
-  Evento(int dimensoes_arg);
+  Evento(int dimensoes_dos_dados_arg);
   Evento();
   int RetornarDimensoes();
   unsigned char RetornarDado(int i);
