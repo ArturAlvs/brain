@@ -1,18 +1,18 @@
 
 using namespace std;
 
-// vision.h
-#ifndef Vision_H
-#define Vision_H
+// Structure.h
+#ifndef Structure_H
+#define Structure_H
 
-class Vision
+class Structure
 {
     // uma estrutura para os sensores
 
     // uma estrutura para o resto
 
 public:
-  Vision();
+  Structure();
 
 };
 
