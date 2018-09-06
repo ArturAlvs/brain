@@ -1,6 +1,7 @@
 // EstruturaEventos.cpp
 #include <stdlib.h> 
 #include "estruturaEventos.hpp"
+#include "evento.hpp"
 
 EstruturaEventos::EstruturaEventos(int dimensoes_da_estrutura_arg)
 {

@@ -1,4 +1,5 @@
-
+#include "evento.hpp"
+#include <vector>
 using namespace std;
 
 // EstruturaEventos.h
@@ -15,7 +16,7 @@ public:
   EstruturaEventos(int dimensoes_da_estrutura_arg);
   EstruturaEventos();
   int RetornarDimensoes();
-  Evento RetornarEvento(int i);
+  Evento RetornarEstruturaEvento(int i);
 
 };
 
