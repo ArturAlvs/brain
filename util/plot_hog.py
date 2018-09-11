@@ -1,4 +1,6 @@
 
+import pyscreenshot as ImageGrab
+
 import matplotlib.pyplot as plt
 
 from skimage.feature import hog
@@ -175,14 +177,20 @@ def my_hog(image, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(3, 3)
 
 # image = data.bw_text()  #384*303    -- 18
 
-image = io.imread('../imgs/bw_text.png', as_gray=True)
+
+imagem = ImageGrab.grab()
+
+imagem.save('sc.jpg', 'jpeg')
+
+
+image = io.imread('sc.jpg', as_gray=True)
 
 # edges = filters.sobel(image)
 # io.imshow(edges)
 # io.show()
 
 
-fd, hog_image = my_hog(image, orientations=36, pixels_per_cell=(9, 9),
+fd, hog_image = my_hog(image, orientations=4, pixels_per_cell=(9, 9),
                     cells_per_block=(1, 1), feature_vector=False, visualize=True, multichannel=True)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 4), sharex=True, sharey=True)

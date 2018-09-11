@@ -1,3 +1,7 @@
+// Neuron.h
+#ifndef Neuron_H
+#define Neuron_H
+
 #include "../eventos/evento.hpp"
 #include "../synapses/synapse.hpp"
 #include <string>
@@ -5,15 +9,10 @@
 
 using namespace std;
 
-
-enum TiposDeNeuronios { PERCEPTION, PATTERN_RECON };
-
-// Neuron.h
-#ifndef Neuron_H
-#define Neuron_H
-
 class Neuron
 {
+  enum TiposDeNeuronios { PERCEPTION, PATTERN_RECON };
+
   string id;
 
   string nome;

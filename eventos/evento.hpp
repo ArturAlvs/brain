@@ -1,9 +1,10 @@
-
-using namespace std;
-
 // Evento.h
 #ifndef Evento_H
 #define Evento_H
+
+#include <string>
+
+using namespace std;
 
 class Evento
 {
@@ -11,10 +12,14 @@ class Evento
 
   int dimensoes_dos_dados;
 
+  string nome;
+
 public:
-  Evento(int dimensoes_dos_dados_arg);
+  Evento(int dimensoes_dos_dados_arg, string s);
   Evento();
   int RetornarDimensoes();
+  string RetornarNome();
+
   unsigned char RetornarDado(int i);
 
 };

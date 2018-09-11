@@ -1,5 +1,5 @@
 // Evento.cpp
-#include <stdlib.h> 
+#include <iostream>
 #include "../neuron/neuron.hpp"
 #include "synapse.hpp"
 #include "../outsidelib/hashidsxx/hashids.h"

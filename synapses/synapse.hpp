@@ -1,16 +1,18 @@
-
-#include <string>
-
-using namespace std;
-
-enum TiposDeSynapses { ELETRICAL, CHEMICAL };
-
 // Synapse.h
 #ifndef Synapse_H
 #define Synapse_H
 
+#include <string>
+
+#include "../neuron/neuron.hpp"
+
+
+using namespace std;
+
+
 class Synapse
 {
+  enum TiposDeSynapses { ELETRICA, QUIMICA };
 
   //ADD
   //  LISTAS && ENUMS
